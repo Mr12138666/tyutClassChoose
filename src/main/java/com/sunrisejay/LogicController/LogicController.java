@@ -4,10 +4,10 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.sunrisejay.pojo.TeacherChooseData;
 import com.sunrisejay.pojo.User;
-import com.sunrisejay.service.CheckLessonService;
-import com.sunrisejay.service.ClassChooseService;
-import com.sunrisejay.service.LoginService;
-import com.sunrisejay.service.ScoreService;
+import com.sunrisejay.service.impl.CheckLessonServiceImpl;
+import com.sunrisejay.service.impl.ClassChooseServiceImpl;
+import com.sunrisejay.service.impl.LoginServiceImpl;
+import com.sunrisejay.service.impl.ScoreServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -22,8 +22,6 @@ public class LogicController {
     public void start() throws Exception {
         User logined = login();
         functionChoose(logined);
-
-
     }
 
     private void functionChoose(User user) throws Exception {
@@ -61,7 +59,7 @@ public class LogicController {
     }
 
     private void score(User user) throws Exception {
-        ScoreService scoreService = new ScoreService();
+        ScoreServiceImpl scoreService = new ScoreServiceImpl();
         scoreService.getScore(user);
 
 
@@ -69,7 +67,7 @@ public class LogicController {
 
     private void classChoose(User user, int i) throws Exception {
 
-        ClassChooseService classChooseService = new ClassChooseService();
+        ClassChooseServiceImpl classChooseService = new ClassChooseServiceImpl();
         //执行到此处说明是选课
         String courseList = classChooseService.getCourseList(user);
         //返回列表首个课程的UID(因为学校一般是只放出一个科目的选课表，故默认处理首个)
@@ -116,14 +114,14 @@ public class LogicController {
 
     private void checkLesson(User user) throws Exception {
 
-        CheckLessonService checkLessonService = new CheckLessonService();
-        checkLessonService.getLesson(user);
+        CheckLessonServiceImpl checkLessonServiceImpl = new CheckLessonServiceImpl();
+        checkLessonServiceImpl.getLesson(user);
 
 
     }
 
     private User login() throws Exception {
-        LoginService loginService = new LoginService();
+        LoginServiceImpl loginService = new LoginServiceImpl();
         User user = new User();
 
         System.out.println("欢迎使用教务管理系统！");
@@ -140,6 +138,8 @@ public class LogicController {
             System.out.println("登录失败！");
             return null;
         }
+
+
         return logined;
     }
 

@@ -1,4 +1,4 @@
-package com.sunrisejay.util;
+package com.sunrisejay.utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -21,7 +21,7 @@ import static com.sunrisejay.constant.Constant.*;
 /**
  * @auther Sunrise_Jay
  */
-public class HttpClientUtils {
+public class HttpClientUtil {
 
     public static String doPost(String targetApi, String bestNode, CookieStore cookieStore, List<BasicNameValuePair> formParams) throws Exception {
 

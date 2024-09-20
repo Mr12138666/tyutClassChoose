@@ -1,4 +1,4 @@
-package com.sunrisejay.util;
+package com.sunrisejay.utils;
 
 import javax.crypto.Cipher;
 import java.nio.charset.StandardCharsets;
@@ -16,6 +16,7 @@ public final class RsaUtil {
             "TufRBzy0ghfFUMfOZ8WluH42luJlEtbv9/dMqixikUrd3H7llf79QIb3gRhIIZT8\n" +
             "TcpN6LUbX8noVcBKuwIDAQAB\n" +
             "-----END PUBLIC KEY-----";
+
 
     // 私有构造器，防止类被实例化
     private RsaUtil() {
