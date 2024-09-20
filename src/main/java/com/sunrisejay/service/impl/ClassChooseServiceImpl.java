@@ -266,7 +266,7 @@ public class ClassChooseServiceImpl implements ClassChooseService {
         formParams.add(new BasicNameValuePair("__RequestVerificationToken", user.getPageToken()));
 
 
-        String content = HttpClientUtil.doPost("Tschedule/C4Xkgl/XsxkSaveForm", NODE, user.getCookieStore(), formParams);
+        String content = HttpClientUtil.doPost("Tschedule/C4Xkgl/XsxkRemoveForm", NODE, user.getCookieStore(), formParams);
 
         //退课正则验证
         Boolean b = checkResponseMessage(content);

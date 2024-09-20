@@ -31,31 +31,33 @@ public class LogicController {
         System.out.println("2.选课");
         System.out.println("3.退课");
         System.out.println("4.成绩查询");
+        System.out.println("0.退出");
         System.out.println("您的选择是：");
-        System.out.print("Sunrise_Jay > ");
+        while (true) {
+            System.out.print("Sunrise_Jay > ");
+            Scanner sc = new Scanner(System.in);
+            String choice = sc.next();
+            switch (choice) {
 
-        Scanner sc = new Scanner(System.in);
-        String choice = sc.next();
+                case "1":
+                    checkLesson(user);
+                    break;
+                case "2":
+                    classChoose(user, 2);
+                    break;
+                case "3":
+                    classChoose(user, 3);
+                    break;
+                case "4":
+                    score(user);
+                    break;
+                case "0":
+                    return;
+                default:
+                    System.out.println("输入有误，请重新输入！");
 
-        switch (choice) {
-
-            case "1":
-                checkLesson(user);
-                break;
-            case "2":
-                classChoose(user, 2);
-                break;
-            case "3":
-                classChoose(user, 3);
-                break;
-            case "4":
-                score(user);
-                break;
-            default:
-                System.out.println("输入有误，请重新输入！");
-                break;
+            }
         }
-
     }
 
     private void score(User user) throws Exception {
@@ -84,7 +86,6 @@ public class LogicController {
         //根据i=3判断退课
         if (i == 3) {
             classChooseService.quitLesson(user, dataObjects, firstCourseUID);
-
             return;
         }
 
