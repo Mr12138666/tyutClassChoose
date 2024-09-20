@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.http.client.CookieStore;
 
+import java.io.Serializable;
+
 /**
  * @auther Sunrise_Jay
  */
@@ -12,7 +14,7 @@ import org.apache.http.client.CookieStore;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User implements Serializable {
 
     private String username;
     private String password;

@@ -8,7 +8,6 @@ import com.sunrisejay.service.CheckLessonService;
 import com.sunrisejay.service.ClassChooseService;
 import com.sunrisejay.service.LoginService;
 import com.sunrisejay.service.ScoreService;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +15,7 @@ import java.util.Scanner;
 /**
  * @auther Sunrise_Jay
  */
-@Component
+
 public class LogicController {
 
 

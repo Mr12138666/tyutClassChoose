@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor // 自动生成无参构造器
 @AllArgsConstructor // 自动生成全参数构造器
-public class TeacherChooseData {
+public class TeacherChooseData implements Serializable {
     private String Zxjxjhh;
     private String Kch;
     private String Kxh;

@@ -5,12 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data // 自动生成 getter 和 setter
 @NoArgsConstructor // 自动生成无参构造器
 @AllArgsConstructor // 自动生成全参数构造器
-public class ClassChooseData {
+public class ClassChooseData implements Serializable {
 
     private String Id;
     private String Describe;

@@ -5,11 +5,11 @@ package com.sunrisejay.constant;
  */
 public class Constant {
 
-    public static final String NODE = "http://jxgl2.tyut.edu.cn/";
-
+ // public static final String NODE = "http://jxgl2.tyut.edu.cn/";
+ public static final String NODE = "http://jwc.jixiaob.cn/";
+ //public static  final String EXPORT_PATH = "F:\\oop-test\\tyutClassChooseV3.0\\src\\main\\resources\\Course.xlsx";
+ public static final String EXPORT_PATH = "src\\main\\resources\\Course.xlsx";
     public static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36";
-    public static final String REFERER = "https://www.bilibili.com/";
-    public static final String ORIGIN = "https://passport.bilibili.com";
 
     public static final String ACCEPT = "application/json, text/javascript, */*; q=0.01";
 
